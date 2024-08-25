@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "751841220436",
+    "project_id": "woo-fur-beta-app-9nht1k",
+    "storage_bucket": "woo-fur-beta-app-9nht1k.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751841220436:android:74e9b48d2da5dcc5b91ac1",
+        "android_client_info": {
+          "package_name": "com.mycompany.woofurbetaapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEzqnRIWZTcHFXq0K5qXVJfOpiAICniCs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
