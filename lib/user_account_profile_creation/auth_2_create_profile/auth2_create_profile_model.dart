@@ -7,6 +7,7 @@ class Auth2CreateProfileModel
     extends FlutterFlowModel<Auth2CreateProfileWidget> {
   ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   // Model for editProfile_auth_2 component.
   late EditProfileAuth2Model editProfileAuth2Model;
 

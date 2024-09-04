@@ -6,6 +6,7 @@ class Auth2ForgotPasswordModel
     extends FlutterFlowModel<Auth2ForgotPasswordWidget> {
   ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   // State field(s) for emailAddress widget.
   FocusNode? emailAddressFocusNode;
   TextEditingController? emailAddressTextController;
