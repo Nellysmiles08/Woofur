@@ -50,7 +50,7 @@ class _Chat2DetailsWidgetState extends State<Chat2DetailsWidget> {
       );
     });
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -463,7 +463,7 @@ class _Chat2DetailsWidgetState extends State<Chat2DetailsWidget> {
           top: true,
           child: wrapWithModel(
             model: _model.chatThreadComponentModel,
-            updateCallback: () => setState(() {}),
+            updateCallback: () => safeSetState(() {}),
             updateOnChange: true,
             child: ChatThreadComponentWidget(
               chatRef: widget.chatRef,

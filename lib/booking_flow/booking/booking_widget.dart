@@ -37,7 +37,7 @@ class _BookingWidgetState extends State<BookingWidget> {
     super.initState();
     _model = createModel(context, () => BookingModel());
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -547,7 +547,8 @@ class _BookingWidgetState extends State<BookingWidget> {
                                                                     .toList(),
                                                             onChanged:
                                                                 (val) async {
-                                                              setState(() {});
+                                                              safeSetState(
+                                                                  () {});
                                                               _model.selectedPayment =
                                                                   containerPaymentsRecordList
                                                                       .where((e) =>
@@ -556,7 +557,8 @@ class _BookingWidgetState extends State<BookingWidget> {
                                                                               .radioButtonValue1)
                                                                       .toList()
                                                                       .first;
-                                                              setState(() {});
+                                                              safeSetState(
+                                                                  () {});
                                                             },
                                                             controller: _model
                                                                     .radioButtonValueController1 ??=
@@ -736,7 +738,7 @@ class _BookingWidgetState extends State<BookingWidget> {
                                                           .toList()
                                                           .toList(),
                                                   onChanged: (val) async {
-                                                    setState(() {});
+                                                    safeSetState(() {});
                                                     _model.selectedProgramIndex =
                                                         containerProgramsRecordList
                                                             .where((e) =>
@@ -746,7 +748,7 @@ class _BookingWidgetState extends State<BookingWidget> {
                                                             .toList()
                                                             .first
                                                             .reference;
-                                                    setState(() {});
+                                                    safeSetState(() {});
                                                   },
                                                   controller: _model
                                                           .radioButtonValueController2 ??=
@@ -2660,7 +2662,7 @@ class _BookingWidgetState extends State<BookingWidget> {
                                                               paymentsRecordReference);
                                                       _model.selectedPayment =
                                                           _model.card;
-                                                      setState(() {});
+                                                      safeSetState(() {});
                                                       ScaffoldMessenger.of(
                                                               context)
                                                           .showSnackBar(
@@ -2879,7 +2881,7 @@ class _BookingWidgetState extends State<BookingWidget> {
                                                             paymentsRecordReference);
                                                     _model.selectedPayment =
                                                         _model.card1;
-                                                    setState(() {});
+                                                    safeSetState(() {});
                                                     ScaffoldMessenger.of(
                                                             context)
                                                         .showSnackBar(
@@ -2980,7 +2982,7 @@ class _BookingWidgetState extends State<BookingWidget> {
                                   }
                                 }
 
-                                setState(() {});
+                                safeSetState(() {});
                               },
                         text: (functions.priceCalculator(
                                         _model.datePicked1,

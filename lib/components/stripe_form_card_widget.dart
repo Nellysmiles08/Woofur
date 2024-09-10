@@ -34,7 +34,7 @@ class _StripeFormCardWidgetState extends State<StripeFormCardWidget> {
     super.initState();
     _model = createModel(context, () => StripeFormCardModel());
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

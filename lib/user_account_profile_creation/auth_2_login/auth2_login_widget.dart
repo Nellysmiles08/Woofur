@@ -76,7 +76,7 @@ class _Auth2LoginWidgetState extends State<Auth2LoginWidget>
       ),
     });
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -317,7 +317,7 @@ class _Auth2LoginWidgetState extends State<Auth2LoginWidget>
                                     fillColor: FlutterFlowTheme.of(context)
                                         .primaryBackground,
                                     suffixIcon: InkWell(
-                                      onTap: () => setState(
+                                      onTap: () => safeSetState(
                                         () => _model.passwordVisibility =
                                             !_model.passwordVisibility,
                                       ),

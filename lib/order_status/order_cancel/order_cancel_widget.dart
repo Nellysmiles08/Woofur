@@ -31,7 +31,7 @@ class _OrderCancelWidgetState extends State<OrderCancelWidget> {
     super.initState();
     _model = createModel(context, () => OrderCancelModel());
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

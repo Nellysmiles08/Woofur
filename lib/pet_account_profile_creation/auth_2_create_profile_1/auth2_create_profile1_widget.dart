@@ -65,7 +65,7 @@ class _Auth2CreateProfile1WidgetState extends State<Auth2CreateProfile1Widget>
       ),
     });
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -151,7 +151,7 @@ class _Auth2CreateProfile1WidgetState extends State<Auth2CreateProfile1Widget>
                     ),
                     child: wrapWithModel(
                       model: _model.createProfileAuth21Model,
-                      updateCallback: () => setState(() {}),
+                      updateCallback: () => safeSetState(() {}),
                       child: CreateProfileAuth21Widget(
                         confirmButtonText: 'Submit',
                         navigateAction: () async {

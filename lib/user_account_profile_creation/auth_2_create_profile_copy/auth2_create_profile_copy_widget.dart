@@ -91,7 +91,7 @@ class _Auth2CreateProfileCopyWidgetState
       ),
     });
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -278,7 +278,7 @@ class _Auth2CreateProfileCopyWidgetState
                                         selectedMedia.every((m) =>
                                             validateFileFormat(
                                                 m.storagePath, context))) {
-                                      setState(
+                                      safeSetState(
                                           () => _model.isDataUploading = true);
                                       var selectedUploadedFiles =
                                           <FFUploadedFile>[];
@@ -320,7 +320,7 @@ class _Auth2CreateProfileCopyWidgetState
                                               selectedMedia.length &&
                                           downloadUrls.length ==
                                               selectedMedia.length) {
-                                        setState(() {
+                                        safeSetState(() {
                                           _model.uploadedLocalFile =
                                               selectedUploadedFiles.first;
                                           _model.uploadedFileUrl =
@@ -328,7 +328,7 @@ class _Auth2CreateProfileCopyWidgetState
                                         });
                                         showUploadMessage(context, 'Success!');
                                       } else {
-                                        setState(() {});
+                                        safeSetState(() {});
                                         showUploadMessage(
                                             context, 'Failed to upload data');
                                         return;
@@ -834,7 +834,7 @@ class _Auth2CreateProfileCopyWidgetState
 
                                     context.pushNamed('homepage');
 
-                                    setState(() {});
+                                    safeSetState(() {});
                                   },
                                   text: 'Save Changes',
                                   options: FFButtonOptions(

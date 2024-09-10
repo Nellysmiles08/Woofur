@@ -65,7 +65,7 @@ class _Auth2CreateProfileWidgetState extends State<Auth2CreateProfileWidget>
       ),
     });
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -157,7 +157,7 @@ class _Auth2CreateProfileWidgetState extends State<Auth2CreateProfileWidget>
                               0.0, 24.0, 0.0, 24.0),
                           child: wrapWithModel(
                             model: _model.editProfileAuth2Model,
-                            updateCallback: () => setState(() {}),
+                            updateCallback: () => safeSetState(() {}),
                             child: EditProfileAuth2Widget(
                               title: 'Create Profile',
                               confirmButtonText: 'Save & Continue',

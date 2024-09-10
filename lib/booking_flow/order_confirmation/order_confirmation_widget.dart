@@ -43,7 +43,7 @@ class _OrderConfirmationWidgetState extends State<OrderConfirmationWidget>
       ),
     });
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

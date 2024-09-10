@@ -38,7 +38,7 @@ class _BookingGroomingWidgetState extends State<BookingGroomingWidget> {
     super.initState();
     _model = createModel(context, () => BookingGroomingModel());
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -531,7 +531,8 @@ class _BookingGroomingWidgetState extends State<BookingGroomingWidget> {
                                                                     .toList(),
                                                             onChanged:
                                                                 (val) async {
-                                                              setState(() {});
+                                                              safeSetState(
+                                                                  () {});
                                                               _model.selectedPayment =
                                                                   containerPaymentsRecordList
                                                                       .where((e) =>
@@ -540,7 +541,8 @@ class _BookingGroomingWidgetState extends State<BookingGroomingWidget> {
                                                                               .radioButtonValue)
                                                                       .toList()
                                                                       .first;
-                                                              setState(() {});
+                                                              safeSetState(
+                                                                  () {});
                                                             },
                                                             controller: _model
                                                                     .radioButtonValueController ??=
@@ -727,7 +729,7 @@ class _BookingGroomingWidgetState extends State<BookingGroomingWidget> {
                                                           .toList()
                                                           .toList(),
                                                   onChanged: (val) async {
-                                                    setState(() {});
+                                                    safeSetState(() {});
                                                     _model.selectedProgramIndex =
                                                         containerProgramRecordList
                                                             .where((e) =>
@@ -774,7 +776,7 @@ class _BookingGroomingWidgetState extends State<BookingGroomingWidget> {
                                                                     .toDouble(),
                                                                 FFAppConstants
                                                                     .groomingTaxInPercent));
-                                                    setState(() {});
+                                                    safeSetState(() {});
                                                   },
                                                   controller: _model
                                                           .programRadioButtonValueController ??=
@@ -1068,7 +1070,8 @@ class _BookingGroomingWidgetState extends State<BookingGroomingWidget> {
                                                                 (newTime) async {
                                                               _model.time1 =
                                                                   newTime;
-                                                              setState(() {});
+                                                              safeSetState(
+                                                                  () {});
                                                             },
                                                           ),
                                                         ),
@@ -1140,7 +1143,8 @@ class _BookingGroomingWidgetState extends State<BookingGroomingWidget> {
                                                                 (newTime) async {
                                                               _model.time2 =
                                                                   newTime;
-                                                              setState(() {});
+                                                              safeSetState(
+                                                                  () {});
                                                             },
                                                           ),
                                                         ),
@@ -2311,7 +2315,7 @@ class _BookingGroomingWidgetState extends State<BookingGroomingWidget> {
                                                               paymentsRecordReference);
                                                       _model.selectedPayment =
                                                           _model.card;
-                                                      setState(() {});
+                                                      safeSetState(() {});
                                                       ScaffoldMessenger.of(
                                                               context)
                                                           .showSnackBar(
@@ -2530,7 +2534,7 @@ class _BookingGroomingWidgetState extends State<BookingGroomingWidget> {
                                                             paymentsRecordReference);
                                                     _model.selectedPayment =
                                                         _model.card1;
-                                                    setState(() {});
+                                                    safeSetState(() {});
                                                     ScaffoldMessenger.of(
                                                             context)
                                                         .showSnackBar(
@@ -2631,7 +2635,7 @@ class _BookingGroomingWidgetState extends State<BookingGroomingWidget> {
                                   }
                                 }
 
-                                setState(() {});
+                                safeSetState(() {});
                               },
                         text: (_model.totalPrice! >
                                     valueOrDefault(

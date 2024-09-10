@@ -37,10 +37,10 @@ class _ContactFacilityManagerWidgetState
     // On component load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       _model.chatListManager = [];
-      setState(() {});
+      safeSetState(() {});
     });
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -219,10 +219,10 @@ class _ContactFacilityManagerWidgetState
                                     onPressed: () async {
                                       _model.addToChatListManager(
                                           currentUserReference!);
-                                      setState(() {});
+                                      safeSetState(() {});
                                       _model.addToChatListManager(
                                           listViewUsersRecord.reference);
-                                      setState(() {});
+                                      safeSetState(() {});
                                       _model.chatRef2 =
                                           await queryChatsRecordOnce(
                                         queryBuilder: (chatsRecord) =>
@@ -312,7 +312,7 @@ class _ContactFacilityManagerWidgetState
                                         );
                                       }
 
-                                      setState(() {});
+                                      safeSetState(() {});
                                     },
                                   ),
                                 ],

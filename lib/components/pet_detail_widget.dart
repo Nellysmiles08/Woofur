@@ -33,7 +33,7 @@ class _PetDetailWidgetState extends State<PetDetailWidget> {
     super.initState();
     _model = createModel(context, () => PetDetailModel());
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

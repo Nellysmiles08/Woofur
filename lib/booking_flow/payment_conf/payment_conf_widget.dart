@@ -68,11 +68,11 @@ class _PaymentConfWidgetState extends State<PaymentConfWidget> {
         if (_model.paymentDocu != null) {
           _model.paySucceed = true;
           _model.isLoading = false;
-          setState(() {});
+          safeSetState(() {});
         } else {
           _model.paySucceed = true;
           _model.isLoading = false;
-          setState(() {});
+          safeSetState(() {});
         }
       } else {
         _model.checkPayment = await StripeApiGroup.checkPaymentCall.call(
@@ -101,11 +101,11 @@ class _PaymentConfWidgetState extends State<PaymentConfWidget> {
           if (_model.paymentDocu != null) {
             _model.paySucceed = true;
             _model.isLoading = false;
-            setState(() {});
+            safeSetState(() {});
           } else {
             _model.paySucceed = true;
             _model.isLoading = false;
-            setState(() {});
+            safeSetState(() {});
           }
         } else {
           await functions
@@ -117,17 +117,17 @@ class _PaymentConfWidgetState extends State<PaymentConfWidget> {
           if (_model.paymentDocu != null) {
             _model.paySucceed = false;
             _model.isLoading = false;
-            setState(() {});
+            safeSetState(() {});
           } else {
             _model.paySucceed = false;
             _model.isLoading = false;
-            setState(() {});
+            safeSetState(() {});
           }
         }
       }
     });
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -156,7 +156,7 @@ class _PaymentConfWidgetState extends State<PaymentConfWidget> {
                         if (_model.daycare1 != null) {
                           return wrapWithModel(
                             model: _model.daycareContainerModel,
-                            updateCallback: () => setState(() {}),
+                            updateCallback: () => safeSetState(() {}),
                             child: DaycareContainerWidget(
                               daycare: _model.daycare1!,
                             ),
@@ -164,7 +164,7 @@ class _PaymentConfWidgetState extends State<PaymentConfWidget> {
                         } else if (_model.grooming != null) {
                           return wrapWithModel(
                             model: _model.groomingContainerModel,
-                            updateCallback: () => setState(() {}),
+                            updateCallback: () => safeSetState(() {}),
                             child: GroomingContainerWidget(
                               grooming: _model.grooming!,
                             ),

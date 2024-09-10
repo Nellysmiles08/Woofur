@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 class CardModel extends FlutterFlowModel<CardWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   // Stores action output result for [Backend Call - API (create customer)] action in FloatingActionButton widget.
   ApiCallResponse? createCustomer;
   // Stores action output result for [Backend Call - API (add payment method to customer)] action in FloatingActionButton widget.

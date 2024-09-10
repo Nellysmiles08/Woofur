@@ -27,7 +27,6 @@ class BookingGroomingModel extends FlutterFlowModel<BookingGroomingWidget> {
 
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   // State field(s) for RadioButton widget.
   FormFieldController<String>? radioButtonValueController;
   // State field(s) for ProgramRadioButton widget.

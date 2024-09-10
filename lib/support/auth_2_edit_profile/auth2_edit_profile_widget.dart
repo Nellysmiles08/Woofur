@@ -56,7 +56,7 @@ class _Auth2EditProfileWidgetState extends State<Auth2EditProfileWidget>
       ),
     });
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -148,7 +148,7 @@ class _Auth2EditProfileWidgetState extends State<Auth2EditProfileWidget>
                   alignment: const AlignmentDirectional(0.0, 0.0),
                   child: wrapWithModel(
                     model: _model.editProfileAuth2Model,
-                    updateCallback: () => setState(() {}),
+                    updateCallback: () => safeSetState(() {}),
                     child: EditProfileAuth2Widget(
                       title: 'Edit Profile',
                       confirmButtonText: 'Save Changes',

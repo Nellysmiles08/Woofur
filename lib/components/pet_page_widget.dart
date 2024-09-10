@@ -51,7 +51,7 @@ class _PetPageWidgetState extends State<PetPageWidget> {
 
     _model.aboutPetFocusNode ??= FocusNode();
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -204,7 +204,7 @@ class _PetPageWidgetState extends State<PetPageWidget> {
                           if (selectedMedia != null &&
                               selectedMedia.every((m) =>
                                   validateFileFormat(m.storagePath, context))) {
-                            setState(() => _model.isDataUploading = true);
+                            safeSetState(() => _model.isDataUploading = true);
                             var selectedUploadedFiles = <FFUploadedFile>[];
 
                             var downloadUrls = <String>[];
@@ -241,14 +241,14 @@ class _PetPageWidgetState extends State<PetPageWidget> {
                             if (selectedUploadedFiles.length ==
                                     selectedMedia.length &&
                                 downloadUrls.length == selectedMedia.length) {
-                              setState(() {
+                              safeSetState(() {
                                 _model.uploadedLocalFile =
                                     selectedUploadedFiles.first;
                                 _model.uploadedFileUrl = downloadUrls.first;
                               });
                               showUploadMessage(context, 'Success!');
                             } else {
-                              setState(() {});
+                              safeSetState(() {});
                               showUploadMessage(
                                   context, 'Failed to upload data');
                               return;
@@ -408,7 +408,7 @@ class _PetPageWidgetState extends State<PetPageWidget> {
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
                       child: FlutterFlowChoiceChips(
                         options: const [ChipData('Male'), ChipData('Female')],
-                        onChanged: (val) => setState(
+                        onChanged: (val) => safeSetState(
                             () => _model.petSexValue = val?.firstOrNull),
                         selectedChipStyle: ChipStyle(
                           backgroundColor:
@@ -696,7 +696,7 @@ class _PetPageWidgetState extends State<PetPageWidget> {
                           ChipData('41-100'),
                           ChipData('101+')
                         ],
-                        onChanged: (val) => setState(
+                        onChanged: (val) => safeSetState(
                             () => _model.petWeightValue = val?.firstOrNull),
                         selectedChipStyle: ChipStyle(
                           backgroundColor:
@@ -908,7 +908,7 @@ class _PetPageWidgetState extends State<PetPageWidget> {
                     alignment: const AlignmentDirectional(0.0, 0.0),
                     child: FlutterFlowChoiceChips(
                       options: const [ChipData('Yes'), ChipData('No')],
-                      onChanged: (val) => setState(
+                      onChanged: (val) => safeSetState(
                           () => _model.neuteredValue = val?.firstOrNull),
                       selectedChipStyle: ChipStyle(
                         backgroundColor: FlutterFlowTheme.of(context).secondary,
@@ -965,8 +965,8 @@ class _PetPageWidgetState extends State<PetPageWidget> {
                     alignment: const AlignmentDirectional(0.0, 0.0),
                     child: FlutterFlowChoiceChips(
                       options: const [ChipData('Yes'), ChipData('No')],
-                      onChanged: (val) =>
-                          setState(() => _model.rabiesValue = val?.firstOrNull),
+                      onChanged: (val) => safeSetState(
+                          () => _model.rabiesValue = val?.firstOrNull),
                       selectedChipStyle: ChipStyle(
                         backgroundColor: FlutterFlowTheme.of(context).secondary,
                         textStyle: FlutterFlowTheme.of(context)
@@ -1023,8 +1023,8 @@ class _PetPageWidgetState extends State<PetPageWidget> {
                     alignment: const AlignmentDirectional(0.0, 0.0),
                     child: FlutterFlowChoiceChips(
                       options: const [ChipData('Yes'), ChipData('No')],
-                      onChanged: (val) =>
-                          setState(() => _model.dhlppValue = val?.firstOrNull),
+                      onChanged: (val) => safeSetState(
+                          () => _model.dhlppValue = val?.firstOrNull),
                       selectedChipStyle: ChipStyle(
                         backgroundColor: FlutterFlowTheme.of(context).secondary,
                         textStyle: FlutterFlowTheme.of(context)

@@ -27,7 +27,7 @@ class _CardWidgetState extends State<CardWidget> {
     super.initState();
     _model = createModel(context, () => CardModel());
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -71,7 +71,7 @@ class _CardWidgetState extends State<CardWidget> {
                     backgroundColor: FlutterFlowTheme.of(context).secondary,
                   ),
                 );
-                if (shouldSetState) setState(() {});
+                if (shouldSetState) safeSetState(() {});
                 return;
               }
             }
@@ -204,7 +204,7 @@ class _CardWidgetState extends State<CardWidget> {
               },
             ).then((value) => safeSetState(() {}));
 
-            if (shouldSetState) setState(() {});
+            if (shouldSetState) safeSetState(() {});
           },
           backgroundColor: FlutterFlowTheme.of(context).primary,
           elevation: 8.0,

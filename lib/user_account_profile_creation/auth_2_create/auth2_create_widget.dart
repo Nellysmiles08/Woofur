@@ -92,7 +92,7 @@ class _Auth2CreateWidgetState extends State<Auth2CreateWidget>
       ),
     });
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -538,7 +538,7 @@ class _Auth2CreateWidgetState extends State<Auth2CreateWidget>
                                       'Friend',
                                       'Flyers'
                                     ],
-                                    onChanged: (val) => setState(
+                                    onChanged: (val) => safeSetState(
                                         () => _model.sourceValue = val),
                                     width: 333.0,
                                     height: 50.0,
@@ -704,7 +704,7 @@ class _Auth2CreateWidgetState extends State<Auth2CreateWidget>
                                         fillColor: FlutterFlowTheme.of(context)
                                             .primaryBackground,
                                         suffixIcon: InkWell(
-                                          onTap: () => setState(
+                                          onTap: () => safeSetState(
                                             () => _model.passwordVisibility =
                                                 !_model.passwordVisibility,
                                           ),

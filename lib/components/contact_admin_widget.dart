@@ -35,10 +35,10 @@ class _ContactAdminWidgetState extends State<ContactAdminWidget> {
     // On component load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       _model.chatList = [];
-      setState(() {});
+      safeSetState(() {});
     });
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -217,10 +217,10 @@ class _ContactAdminWidgetState extends State<ContactAdminWidget> {
                                     onPressed: () async {
                                       _model
                                           .addToChatList(currentUserReference!);
-                                      setState(() {});
+                                      safeSetState(() {});
                                       _model.addToChatList(
                                           listViewUsersRecord.reference);
-                                      setState(() {});
+                                      safeSetState(() {});
                                       _model.chatRef =
                                           await queryChatsRecordOnce(
                                         queryBuilder: (chatsRecord) =>
@@ -310,7 +310,7 @@ class _ContactAdminWidgetState extends State<ContactAdminWidget> {
                                         );
                                       }
 
-                                      setState(() {});
+                                      safeSetState(() {});
                                     },
                                   ),
                                 ],

@@ -62,7 +62,7 @@ class _CreateProfileAuth2WidgetState extends State<CreateProfileAuth2Widget> {
         text: valueOrDefault(currentUserDocument?.instagram, ''));
     _model.yourInstaFocusNode ??= FocusNode();
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -162,7 +162,7 @@ class _CreateProfileAuth2WidgetState extends State<CreateProfileAuth2Widget> {
                   if (selectedMedia != null &&
                       selectedMedia.every(
                           (m) => validateFileFormat(m.storagePath, context))) {
-                    setState(() => _model.isDataUploading = true);
+                    safeSetState(() => _model.isDataUploading = true);
                     var selectedUploadedFiles = <FFUploadedFile>[];
 
                     var downloadUrls = <String>[];
@@ -196,13 +196,13 @@ class _CreateProfileAuth2WidgetState extends State<CreateProfileAuth2Widget> {
                     }
                     if (selectedUploadedFiles.length == selectedMedia.length &&
                         downloadUrls.length == selectedMedia.length) {
-                      setState(() {
+                      safeSetState(() {
                         _model.uploadedLocalFile = selectedUploadedFiles.first;
                         _model.uploadedFileUrl = downloadUrls.first;
                       });
                       showUploadMessage(context, 'Success!');
                     } else {
-                      setState(() {});
+                      safeSetState(() {});
                       showUploadMessage(context, 'Failed to upload data');
                       return;
                     }

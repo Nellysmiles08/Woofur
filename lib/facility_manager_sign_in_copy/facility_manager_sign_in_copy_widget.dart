@@ -40,7 +40,7 @@ class _FacilityManagerSignInCopyWidgetState
       vsync: this,
       length: 1,
       initialIndex: 0,
-    )..addListener(() => setState(() {}));
+    )..addListener(() => safeSetState(() {}));
     _model.emailAddressTextController ??= TextEditingController();
     _model.emailAddressFocusNode ??= FocusNode();
 
@@ -76,7 +76,7 @@ class _FacilityManagerSignInCopyWidgetState
       ),
     });
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -408,7 +408,8 @@ class _FacilityManagerSignInCopyWidgetState
                                                       contentPadding:
                                                           const EdgeInsets.all(24.0),
                                                       suffixIcon: InkWell(
-                                                        onTap: () => setState(
+                                                        onTap: () =>
+                                                            safeSetState(
                                                           () => _model
                                                                   .passwordVisibility =
                                                               !_model

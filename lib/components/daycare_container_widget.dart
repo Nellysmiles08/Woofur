@@ -32,7 +32,7 @@ class _DaycareContainerWidgetState extends State<DaycareContainerWidget> {
     super.initState();
     _model = createModel(context, () => DaycareContainerModel());
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

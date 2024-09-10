@@ -33,7 +33,7 @@ class _GroomingContainerWidgetState extends State<GroomingContainerWidget> {
     super.initState();
     _model = createModel(context, () => GroomingContainerModel());
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

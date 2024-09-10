@@ -38,7 +38,7 @@ class _AdminSignInCopyWidgetState extends State<AdminSignInCopyWidget>
       vsync: this,
       length: 1,
       initialIndex: 0,
-    )..addListener(() => setState(() {}));
+    )..addListener(() => safeSetState(() {}));
     _model.emailAddressTextController ??= TextEditingController();
     _model.emailAddressFocusNode ??= FocusNode();
 
@@ -74,7 +74,7 @@ class _AdminSignInCopyWidgetState extends State<AdminSignInCopyWidget>
       ),
     });
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -446,7 +446,7 @@ class _AdminSignInCopyWidgetState extends State<AdminSignInCopyWidget>
                                                                     24.0),
                                                             suffixIcon: InkWell(
                                                               onTap: () =>
-                                                                  setState(
+                                                                  safeSetState(
                                                                 () => _model
                                                                         .passwordVisibility =
                                                                     !_model

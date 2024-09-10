@@ -38,7 +38,7 @@ class _PaymentConfimationWidgetState extends State<PaymentConfimationWidget> {
     super.initState();
     _model = createModel(context, () => PaymentConfimationModel());
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

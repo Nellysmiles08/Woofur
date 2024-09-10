@@ -56,7 +56,7 @@ class _Auth2EditProfile1WidgetState extends State<Auth2EditProfile1Widget>
       ),
     });
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

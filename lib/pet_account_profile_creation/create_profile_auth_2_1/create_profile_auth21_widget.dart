@@ -68,7 +68,7 @@ class _CreateProfileAuth21WidgetState extends State<CreateProfileAuth21Widget> {
     _model.aboutPetTextController ??= TextEditingController();
     _model.aboutPetFocusNode ??= FocusNode();
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -179,7 +179,7 @@ class _CreateProfileAuth21WidgetState extends State<CreateProfileAuth21Widget> {
                     if (selectedMedia != null &&
                         selectedMedia.every((m) =>
                             validateFileFormat(m.storagePath, context))) {
-                      setState(() => _model.isDataUploading = true);
+                      safeSetState(() => _model.isDataUploading = true);
                       var selectedUploadedFiles = <FFUploadedFile>[];
 
                       var downloadUrls = <String>[];
@@ -215,14 +215,14 @@ class _CreateProfileAuth21WidgetState extends State<CreateProfileAuth21Widget> {
                       if (selectedUploadedFiles.length ==
                               selectedMedia.length &&
                           downloadUrls.length == selectedMedia.length) {
-                        setState(() {
+                        safeSetState(() {
                           _model.uploadedLocalFile =
                               selectedUploadedFiles.first;
                           _model.uploadedFileUrl = downloadUrls.first;
                         });
                         showUploadMessage(context, 'Success!');
                       } else {
-                        setState(() {});
+                        safeSetState(() {});
                         showUploadMessage(context, 'Failed to upload data');
                         return;
                       }
@@ -333,7 +333,7 @@ class _CreateProfileAuth21WidgetState extends State<CreateProfileAuth21Widget> {
                 child: FlutterFlowChoiceChips(
                   options: const [ChipData('Male'), ChipData('Female')],
                   onChanged: (val) =>
-                      setState(() => _model.petSexValue = val?.firstOrNull),
+                      safeSetState(() => _model.petSexValue = val?.firstOrNull),
                   selectedChipStyle: ChipStyle(
                     backgroundColor: FlutterFlowTheme.of(context).secondary,
                     textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -587,8 +587,8 @@ class _CreateProfileAuth21WidgetState extends State<CreateProfileAuth21Widget> {
                     ChipData('41-100'),
                     ChipData('101+')
                   ],
-                  onChanged: (val) =>
-                      setState(() => _model.petWeightValue = val?.firstOrNull),
+                  onChanged: (val) => safeSetState(
+                      () => _model.petWeightValue = val?.firstOrNull),
                   selectedChipStyle: ChipStyle(
                     backgroundColor: FlutterFlowTheme.of(context).secondary,
                     textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -773,7 +773,7 @@ class _CreateProfileAuth21WidgetState extends State<CreateProfileAuth21Widget> {
               child: FlutterFlowChoiceChips(
                 options: const [ChipData('Yes'), ChipData('No')],
                 onChanged: (val) =>
-                    setState(() => _model.neuteredValue = val?.firstOrNull),
+                    safeSetState(() => _model.neuteredValue = val?.firstOrNull),
                 selectedChipStyle: ChipStyle(
                   backgroundColor: FlutterFlowTheme.of(context).secondary,
                   textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -825,7 +825,7 @@ class _CreateProfileAuth21WidgetState extends State<CreateProfileAuth21Widget> {
               child: FlutterFlowChoiceChips(
                 options: const [ChipData('Yes'), ChipData('No')],
                 onChanged: (val) =>
-                    setState(() => _model.rabiesValue = val?.firstOrNull),
+                    safeSetState(() => _model.rabiesValue = val?.firstOrNull),
                 selectedChipStyle: ChipStyle(
                   backgroundColor: FlutterFlowTheme.of(context).secondary,
                   textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -877,7 +877,7 @@ class _CreateProfileAuth21WidgetState extends State<CreateProfileAuth21Widget> {
               child: FlutterFlowChoiceChips(
                 options: const [ChipData('Yes'), ChipData('No')],
                 onChanged: (val) =>
-                    setState(() => _model.dhlppValue = val?.firstOrNull),
+                    safeSetState(() => _model.dhlppValue = val?.firstOrNull),
                 selectedChipStyle: ChipStyle(
                   backgroundColor: FlutterFlowTheme.of(context).secondary,
                   textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
