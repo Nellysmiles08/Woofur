@@ -2,6 +2,7 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/components/stripe_form_card_widget.dart';
+import '/flutter_flow/flutter_flow_checkbox_group.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_radio_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -398,51 +399,79 @@ class _BookingWidgetState extends State<BookingWidget> {
                                                           );
                                                         }
                                                         List<PetsRecord>
-                                                            columnPetsRecordList =
+                                                            rowPetsRecordList =
                                                             snapshot.data!;
                                                         // Return an empty Container when the item does not exist.
                                                         if (snapshot
                                                             .data!.isEmpty) {
                                                           return Container();
                                                         }
-                                                        final columnPetsRecord =
-                                                            columnPetsRecordList
+                                                        final rowPetsRecord =
+                                                            rowPetsRecordList
                                                                     .isNotEmpty
-                                                                ? columnPetsRecordList
+                                                                ? rowPetsRecordList
                                                                     .first
                                                                 : null;
 
-                                                        return Column(
+                                                        return Row(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .start,
                                                           children: [
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0,
-                                                                          4.0),
-                                                              child: Text(
-                                                                columnPetsRecord!
-                                                                    .petName,
-                                                                style: FlutterFlowTheme.of(
+                                                            Expanded(
+                                                              child:
+                                                                  FlutterFlowCheckboxGroup(
+                                                                options: const [
+                                                                  'Option 1',
+                                                                  'Option 2',
+                                                                  'Option 3'
+                                                                ],
+                                                                onChanged:
+                                                                    (val) async {
+                                                                  safeSetState(() =>
+                                                                      _model.checkboxGroupValues =
+                                                                          val);
+                                                                  await queryPetsRecordOnce(
+                                                                    limit: 5,
+                                                                  );
+                                                                },
+                                                                controller: _model
+                                                                        .checkboxGroupValueController ??=
+                                                                    FormFieldController<
+                                                                        List<
+                                                                            String>>(
+                                                                  [],
+                                                                ),
+                                                                activeColor:
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .primary,
+                                                                checkColor:
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .info,
+                                                                checkboxBorderColor:
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .secondaryText,
+                                                                textStyle: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .labelSmall
+                                                                    .bodyMedium
                                                                     .override(
                                                                       fontFamily:
                                                                           'Readex Pro',
                                                                       letterSpacing:
                                                                           0.0,
                                                                     ),
+                                                                checkboxBorderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            4.0),
+                                                                initialized:
+                                                                    _model.checkboxGroupValues !=
+                                                                        null,
                                                               ),
                                                             ),
-                                                          ].divide(const SizedBox(
-                                                              height: 4.0)),
+                                                          ],
                                                         );
                                                       },
                                                     ),
@@ -779,7 +808,7 @@ class _BookingWidgetState extends State<BookingWidget> {
                                                   radioButtonColor:
                                                       FlutterFlowTheme.of(
                                                               context)
-                                                          .primary,
+                                                          .secondary,
                                                   inactiveRadioButtonColor:
                                                       FlutterFlowTheme.of(
                                                               context)

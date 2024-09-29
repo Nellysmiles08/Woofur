@@ -15,6 +15,12 @@ class BookingModel extends FlutterFlowModel<BookingWidget> {
 
   ///  State fields for stateful widgets in this page.
 
+  // State field(s) for CheckboxGroup widget.
+  FormFieldController<List<String>>? checkboxGroupValueController;
+  List<String>? get checkboxGroupValues => checkboxGroupValueController?.value;
+  set checkboxGroupValues(List<String>? v) =>
+      checkboxGroupValueController?.value = v;
+
   // State field(s) for RadioButton widget.
   FormFieldController<String>? radioButtonValueController1;
   // State field(s) for RadioButton widget.

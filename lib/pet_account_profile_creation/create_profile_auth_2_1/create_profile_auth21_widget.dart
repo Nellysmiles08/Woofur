@@ -335,13 +335,13 @@ class _CreateProfileAuth21WidgetState extends State<CreateProfileAuth21Widget> {
                   onChanged: (val) =>
                       safeSetState(() => _model.petSexValue = val?.firstOrNull),
                   selectedChipStyle: ChipStyle(
-                    backgroundColor: FlutterFlowTheme.of(context).secondary,
+                    backgroundColor: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
                           color: FlutterFlowTheme.of(context).primaryText,
                           letterSpacing: 0.0,
                         ),
-                    iconColor: FlutterFlowTheme.of(context).primaryText,
+                    iconColor: FlutterFlowTheme.of(context).primaryBackground,
                     iconSize: 0.0,
                     elevation: 4.0,
                     borderRadius: BorderRadius.circular(16.0),
@@ -353,7 +353,7 @@ class _CreateProfileAuth21WidgetState extends State<CreateProfileAuth21Widget> {
                           color: FlutterFlowTheme.of(context).secondaryText,
                           letterSpacing: 0.0,
                         ),
-                    iconColor: FlutterFlowTheme.of(context).secondaryText,
+                    iconColor: FlutterFlowTheme.of(context).primaryText,
                     iconSize: 18.0,
                     elevation: 0.0,
                     borderRadius: BorderRadius.circular(16.0),
@@ -590,7 +590,7 @@ class _CreateProfileAuth21WidgetState extends State<CreateProfileAuth21Widget> {
                   onChanged: (val) => safeSetState(
                       () => _model.petWeightValue = val?.firstOrNull),
                   selectedChipStyle: ChipStyle(
-                    backgroundColor: FlutterFlowTheme.of(context).secondary,
+                    backgroundColor: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -775,7 +775,7 @@ class _CreateProfileAuth21WidgetState extends State<CreateProfileAuth21Widget> {
                 onChanged: (val) =>
                     safeSetState(() => _model.neuteredValue = val?.firstOrNull),
                 selectedChipStyle: ChipStyle(
-                  backgroundColor: FlutterFlowTheme.of(context).secondary,
+                  backgroundColor: FlutterFlowTheme.of(context).primary,
                   textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Readex Pro',
                         color: FlutterFlowTheme.of(context).primaryText,
@@ -827,7 +827,7 @@ class _CreateProfileAuth21WidgetState extends State<CreateProfileAuth21Widget> {
                 onChanged: (val) =>
                     safeSetState(() => _model.rabiesValue = val?.firstOrNull),
                 selectedChipStyle: ChipStyle(
-                  backgroundColor: FlutterFlowTheme.of(context).secondary,
+                  backgroundColor: FlutterFlowTheme.of(context).primary,
                   textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Readex Pro',
                         color: FlutterFlowTheme.of(context).primaryText,
@@ -879,7 +879,7 @@ class _CreateProfileAuth21WidgetState extends State<CreateProfileAuth21Widget> {
                 onChanged: (val) =>
                     safeSetState(() => _model.dhlppValue = val?.firstOrNull),
                 selectedChipStyle: ChipStyle(
-                  backgroundColor: FlutterFlowTheme.of(context).secondary,
+                  backgroundColor: FlutterFlowTheme.of(context).primary,
                   textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Readex Pro',
                         color: FlutterFlowTheme.of(context).primaryText,
@@ -1167,7 +1167,7 @@ class _CreateProfileAuth21WidgetState extends State<CreateProfileAuth21Widget> {
                     padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
                         const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).primary,
+                    color: FlutterFlowTheme.of(context).secondary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Readex Pro',
                           letterSpacing: 0.0,

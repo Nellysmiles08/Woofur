@@ -201,7 +201,7 @@ class _PaymentConfimationWidgetState extends State<PaymentConfimationWidget> {
                                     FaIcon(
                                       FontAwesomeIcons.home,
                                       color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
+                                          .secondary,
                                       size: 24.0,
                                     ),
                                     Text(
@@ -230,7 +230,7 @@ class _PaymentConfimationWidgetState extends State<PaymentConfimationWidget> {
                                     Icon(
                                       Icons.location_city,
                                       color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
+                                          .secondary,
                                       size: 24.0,
                                     ),
                                     Text(
@@ -258,7 +258,7 @@ class _PaymentConfimationWidgetState extends State<PaymentConfimationWidget> {
                                     Icon(
                                       Icons.calendar_today,
                                       color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
+                                          .secondary,
                                       size: 24.0,
                                     ),
                                     Text(

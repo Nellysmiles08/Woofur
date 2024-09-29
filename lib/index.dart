@@ -41,7 +41,8 @@ export '/facility_manager_sign_in_copy/facility_manager_sign_in_copy_widget.dart
     show FacilityManagerSignInCopyWidget;
 export '/booking_flow/payment_confimation/payment_confimation_widget.dart'
     show PaymentConfimationWidget;
-export '/pet_details/pet_details_widget.dart' show PetDetailsWidget;
+export '/pet_account_profile_creation/pet_details/pet_details_widget.dart'
+    show PetDetailsWidget;
 export '/booking_flow/facility_listing_grooming/facility_listing_grooming_widget.dart'
     show FacilityListingGroomingWidget;
 export '/booking_flow/booking_grooming/booking_grooming_widget.dart'

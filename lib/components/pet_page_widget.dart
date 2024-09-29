@@ -411,8 +411,7 @@ class _PetPageWidgetState extends State<PetPageWidget> {
                         onChanged: (val) => safeSetState(
                             () => _model.petSexValue = val?.firstOrNull),
                         selectedChipStyle: ChipStyle(
-                          backgroundColor:
-                              FlutterFlowTheme.of(context).secondary,
+                          backgroundColor: FlutterFlowTheme.of(context).primary,
                           textStyle: FlutterFlowTheme.of(context)
                               .bodyMedium
                               .override(
@@ -699,8 +698,7 @@ class _PetPageWidgetState extends State<PetPageWidget> {
                         onChanged: (val) => safeSetState(
                             () => _model.petWeightValue = val?.firstOrNull),
                         selectedChipStyle: ChipStyle(
-                          backgroundColor:
-                              FlutterFlowTheme.of(context).secondary,
+                          backgroundColor: FlutterFlowTheme.of(context).primary,
                           textStyle: FlutterFlowTheme.of(context)
                               .bodyMedium
                               .override(
@@ -911,7 +909,7 @@ class _PetPageWidgetState extends State<PetPageWidget> {
                       onChanged: (val) => safeSetState(
                           () => _model.neuteredValue = val?.firstOrNull),
                       selectedChipStyle: ChipStyle(
-                        backgroundColor: FlutterFlowTheme.of(context).secondary,
+                        backgroundColor: FlutterFlowTheme.of(context).primary,
                         textStyle: FlutterFlowTheme.of(context)
                             .bodyMedium
                             .override(
@@ -968,7 +966,7 @@ class _PetPageWidgetState extends State<PetPageWidget> {
                       onChanged: (val) => safeSetState(
                           () => _model.rabiesValue = val?.firstOrNull),
                       selectedChipStyle: ChipStyle(
-                        backgroundColor: FlutterFlowTheme.of(context).secondary,
+                        backgroundColor: FlutterFlowTheme.of(context).primary,
                         textStyle: FlutterFlowTheme.of(context)
                             .bodyMedium
                             .override(
@@ -1026,7 +1024,7 @@ class _PetPageWidgetState extends State<PetPageWidget> {
                       onChanged: (val) => safeSetState(
                           () => _model.dhlppValue = val?.firstOrNull),
                       selectedChipStyle: ChipStyle(
-                        backgroundColor: FlutterFlowTheme.of(context).secondary,
+                        backgroundColor: FlutterFlowTheme.of(context).primary,
                         textStyle: FlutterFlowTheme.of(context)
                             .bodyMedium
                             .override(

@@ -171,74 +171,74 @@ class _Auth2EditProfile1WidgetState extends State<Auth2EditProfile1Widget>
                 ).animateOnPageLoad(
                     animationsMap['containerOnPageLoadAnimation']!),
               ),
-              StreamBuilder<List<PetsRecord>>(
-                stream: queryPetsRecord(
-                  parent: currentUserReference,
-                ),
-                builder: (context, snapshot) {
-                  // Customize what your widget looks like when it's loading.
-                  if (!snapshot.hasData) {
-                    return Center(
-                      child: SizedBox(
-                        width: 50.0,
-                        height: 50.0,
-                        child: CircularProgressIndicator(
-                          valueColor: AlwaysStoppedAnimation<Color>(
-                            FlutterFlowTheme.of(context).primary,
-                          ),
-                        ),
-                      ),
-                    );
-                  }
-                  List<PetsRecord> containerPetsRecordList = snapshot.data!;
-
-                  return Container(
-                    decoration: const BoxDecoration(),
-                    child: Builder(
-                      builder: (context) {
-                        final pets = containerPetsRecordList.toList();
-
-                        return SizedBox(
-                          height: MediaQuery.sizeOf(context).height * 0.75,
-                          child: CarouselSlider.builder(
-                            itemCount: pets.length,
-                            itemBuilder: (context, petsIndex, _) {
-                              final petsItem = pets[petsIndex];
-                              return Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 16.0),
-                                    child: PetDetailWidget(
-                                      key: Key(
-                                          'Keyfsg_${petsIndex}_of_${pets.length}'),
-                                      pet: petsItem,
-                                    ),
-                                  ),
-                                ],
-                              );
-                            },
-                            carouselController: _model.carouselController ??=
-                                CarouselController(),
-                            options: CarouselOptions(
-                              initialPage: max(0, min(0, pets.length - 1)),
-                              viewportFraction: 0.85,
-                              disableCenter: true,
-                              enlargeCenterPage: true,
-                              enlargeFactor: 0.5,
-                              enableInfiniteScroll: false,
-                              scrollDirection: Axis.horizontal,
-                              autoPlay: false,
-                              onPageChanged: (index, _) =>
-                                  _model.carouselCurrentIndex = index,
+              Flexible(
+                child: StreamBuilder<List<PetsRecord>>(
+                  stream: queryPetsRecord(
+                    parent: currentUserReference,
+                  ),
+                  builder: (context, snapshot) {
+                    // Customize what your widget looks like when it's loading.
+                    if (!snapshot.hasData) {
+                      return Center(
+                        child: SizedBox(
+                          width: 50.0,
+                          height: 50.0,
+                          child: CircularProgressIndicator(
+                            valueColor: AlwaysStoppedAnimation<Color>(
+                              FlutterFlowTheme.of(context).primary,
                             ),
                           ),
-                        );
-                      },
-                    ),
-                  );
-                },
+                        ),
+                      );
+                    }
+                    List<PetsRecord> containerPetsRecordList = snapshot.data!;
+
+                    return Container(
+                      decoration: const BoxDecoration(),
+                      child: Builder(
+                        builder: (context) {
+                          final pets = containerPetsRecordList.toList();
+
+                          return SizedBox(
+                            height: MediaQuery.sizeOf(context).height * 0.75,
+                            child: CarouselSlider.builder(
+                              itemCount: pets.length,
+                              itemBuilder: (context, petsIndex, _) {
+                                final petsItem = pets[petsIndex];
+                                return Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Flexible(
+                                      child: PetDetailWidget(
+                                        key: Key(
+                                            'Keyfsg_${petsIndex}_of_${pets.length}'),
+                                        pet: petsItem,
+                                      ),
+                                    ),
+                                  ],
+                                );
+                              },
+                              carouselController: _model.carouselController ??=
+                                  CarouselController(),
+                              options: CarouselOptions(
+                                initialPage: max(0, min(0, pets.length - 1)),
+                                viewportFraction: 0.85,
+                                disableCenter: true,
+                                enlargeCenterPage: true,
+                                enlargeFactor: 0.5,
+                                enableInfiniteScroll: false,
+                                scrollDirection: Axis.horizontal,
+                                autoPlay: false,
+                                onPageChanged: (index, _) =>
+                                    _model.carouselCurrentIndex = index,
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    );
+                  },
+                ),
               ),
             ],
           ),

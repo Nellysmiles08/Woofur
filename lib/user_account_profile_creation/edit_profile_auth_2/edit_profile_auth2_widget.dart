@@ -132,15 +132,17 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(4.0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(60.0),
-                          child: CachedNetworkImage(
-                            fadeInDuration: const Duration(milliseconds: 200),
-                            fadeOutDuration: const Duration(milliseconds: 200),
-                            imageUrl: _model.uploadedFileUrl,
-                            width: 300.0,
-                            height: 200.0,
-                            fit: BoxFit.cover,
+                        child: AuthUserStreamWidget(
+                          builder: (context) => ClipRRect(
+                            borderRadius: BorderRadius.circular(60.0),
+                            child: CachedNetworkImage(
+                              fadeInDuration: const Duration(milliseconds: 200),
+                              fadeOutDuration: const Duration(milliseconds: 200),
+                              imageUrl: currentUserPhoto,
+                              width: 300.0,
+                              height: 200.0,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
@@ -588,6 +590,7 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
                     firstName: _model.firstNameTextController.text,
                     lastName: _model.lastNameTextController.text,
                     phoneNumber: currentPhoneNumber,
+                    photoUrl: _model.uploadedFileUrl,
                   ));
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
@@ -612,7 +615,7 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   iconPadding:
                       const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                  color: FlutterFlowTheme.of(context).primary,
+                  color: FlutterFlowTheme.of(context).secondary,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'Readex Pro',
                         letterSpacing: 0.0,

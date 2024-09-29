@@ -198,7 +198,8 @@ class _PaymentConfWidgetState extends State<PaymentConfWidget> {
                                       .displaySmall
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: const Color(0xFF4B39EF),
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondary,
                                         fontSize: 24.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
@@ -210,19 +211,22 @@ class _PaymentConfWidgetState extends State<PaymentConfWidget> {
                                     width: 45.0,
                                     height: 45.0,
                                     decoration: BoxDecoration(
-                                      color: const Color(0x4C4B39EF),
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
                                       shape: BoxShape.circle,
                                       border: Border.all(
-                                        color: const Color(0xFF4B39EF),
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondary,
                                         width: 2.0,
                                       ),
                                     ),
                                     alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: const Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                    child: Align(
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Icon(
                                         Icons.check_rounded,
-                                        color: Color(0xFF4B39EF),
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondary,
                                         size: 25.0,
                                       ),
                                     ),
@@ -534,7 +538,7 @@ class _PaymentConfWidgetState extends State<PaymentConfWidget> {
                               0.0, 0.0, 0.0, 0.0),
                           iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: const Color(0xFFE0E3E7),
+                          color: FlutterFlowTheme.of(context).primary,
                           textStyle:
                               FlutterFlowTheme.of(context).bodyLarge.override(
                                     fontFamily: 'Plus Jakarta Sans',

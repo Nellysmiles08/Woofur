@@ -8,7 +8,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'auth2_create_model.dart';
 export 'auth2_create_model.dart';
 
@@ -142,15 +141,6 @@ class _Auth2CreateWidgetState extends State<Auth2CreateWidget>
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 12.0, 0.0),
-                          child: FaIcon(
-                            FontAwesomeIcons.dog,
-                            color: FlutterFlowTheme.of(context).info,
-                            size: 44.0,
-                          ),
-                        ),
                         Text(
                           'WooFur',
                           style: FlutterFlowTheme.of(context)
@@ -796,7 +786,7 @@ class _Auth2CreateWidgetState extends State<Auth2CreateWidget>
                                       0.0, 0.0, 0.0, 0.0),
                                   iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: FlutterFlowTheme.of(context).primary,
+                                  color: FlutterFlowTheme.of(context).secondary,
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
@@ -865,6 +855,8 @@ class _Auth2CreateWidgetState extends State<Auth2CreateWidget>
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondary,
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -902,7 +894,7 @@ class _Auth2CreateWidgetState extends State<Auth2CreateWidget>
                                         .override(
                                           fontFamily: 'Readex Pro',
                                           color: FlutterFlowTheme.of(context)
-                                              .primary,
+                                              .secondary,
                                           letterSpacing: 0.0,
                                         ),
                                   ),
@@ -933,7 +925,7 @@ class _Auth2CreateWidgetState extends State<Auth2CreateWidget>
                                         .override(
                                           fontFamily: 'Readex Pro',
                                           color: FlutterFlowTheme.of(context)
-                                              .primary,
+                                              .secondary,
                                           letterSpacing: 0.0,
                                         ),
                                   ),

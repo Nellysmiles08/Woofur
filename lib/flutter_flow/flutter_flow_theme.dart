@@ -32,6 +32,18 @@ abstract class FlutterFlowTheme {
   late Color error;
   late Color info;
 
+  late Color oldGold;
+  late Color citron;
+  late Color flax;
+  late Color cream;
+  late Color ashGray;
+  late Color customColor1;
+  late Color royalBlueTraditional;
+  late Color marianBlue;
+  late Color polynesianBlue;
+  late Color mikadoYellow;
+  late Color gold;
+
   @Deprecated('Use displaySmallFamily instead')
   String get title1Family => displaySmallFamily;
   @Deprecated('Use displaySmall instead')
@@ -103,10 +115,10 @@ class LightModeTheme extends FlutterFlowTheme {
   @Deprecated('Use tertiary instead')
   Color get tertiaryColor => tertiary;
 
-  late Color primary = const Color(0xFF4B39EF);
-  late Color secondary = const Color(0xFF39D2C0);
-  late Color tertiary = const Color(0xFFEE8B60);
-  late Color alternate = const Color(0xFFE0E3E7);
+  late Color primary = const Color(0xFFFDC500);
+  late Color secondary = const Color(0xFF00509D);
+  late Color tertiary = const Color(0xFFFDC500);
+  late Color alternate = const Color(0xFF00509D);
   late Color primaryText = const Color(0xFF14181B);
   late Color secondaryText = const Color(0xFF57636C);
   late Color primaryBackground = const Color(0xFFF1F4F8);
@@ -119,6 +131,18 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color warning = const Color(0xFFF9CF58);
   late Color error = const Color(0xFFFF5963);
   late Color info = const Color(0xFFFFFFFF);
+
+  late Color oldGold = const Color(0xFFD5B942);
+  late Color citron = const Color(0xFFD9D375);
+  late Color flax = const Color(0xFFE3DE8F);
+  late Color cream = const Color(0xFFEDFBC1);
+  late Color ashGray = const Color(0xFFBFCBC2);
+  late Color customColor1 = const Color(0xFFE29744);
+  late Color royalBlueTraditional = const Color(0xFF00296B);
+  late Color marianBlue = const Color(0xFF003F88);
+  late Color polynesianBlue = const Color(0xFF00509D);
+  late Color mikadoYellow = const Color(0xFFFDC500);
+  late Color gold = const Color(0xFFFFD500);
 }
 
 abstract class Typography {

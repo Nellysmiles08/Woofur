@@ -73,7 +73,7 @@ class _OrderConfirmationWidgetState extends State<OrderConfirmationWidget>
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
                   child: Icon(
                     Icons.check_circle_outline_rounded,
-                    color: FlutterFlowTheme.of(context).primary,
+                    color: FlutterFlowTheme.of(context).secondary,
                     size: 160.0,
                   ).animateOnPageLoad(
                       animationsMap['iconOnPageLoadAnimation']!),

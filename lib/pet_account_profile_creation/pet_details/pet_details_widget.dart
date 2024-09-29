@@ -123,10 +123,30 @@ class _PetDetailsWidgetState extends State<PetDetailsWidget> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
+                                  'Name:',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        fontSize: 18.0,
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
+                                Text(
                                   valueOrDefault<String>(
                                     petDetailsPetsRecord.petName,
                                     'Greg',
                                   ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        fontSize: 18.0,
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
+                                Text(
+                                  'Sex:',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -151,6 +171,16 @@ class _PetDetailsWidgetState extends State<PetDetailsWidget> {
                                       ),
                                 ),
                                 Text(
+                                  'Breed:',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        fontSize: 18.0,
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
+                                Text(
                                   valueOrDefault<String>(
                                     petDetailsPetsRecord.breed,
                                     'Pitbull',
@@ -162,6 +192,16 @@ class _PetDetailsWidgetState extends State<PetDetailsWidget> {
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryText,
                                         fontSize: 16.0,
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
+                                Text(
+                                  'Age:',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        fontSize: 18.0,
                                         letterSpacing: 0.0,
                                       ),
                                 ),
@@ -181,6 +221,16 @@ class _PetDetailsWidgetState extends State<PetDetailsWidget> {
                                       ),
                                 ),
                                 Text(
+                                  'Weight:',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        fontSize: 18.0,
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
+                                Text(
                                   valueOrDefault<String>(
                                     petDetailsPetsRecord.weight,
                                     '65kg',
@@ -195,47 +245,47 @@ class _PetDetailsWidgetState extends State<PetDetailsWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                 ),
+                                Text(
+                                  'Behavior with other dogs and people:',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        fontSize: 18.0,
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
+                                Text(
+                                  valueOrDefault<String>(
+                                    petDetailsPetsRecord.behaviorDogs,
+                                    '65kg',
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
+                                        fontSize: 16.0,
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
+                                Text(
+                                  valueOrDefault<String>(
+                                    petDetailsPetsRecord.behaviorPeople,
+                                    '65kg',
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
+                                        fontSize: 16.0,
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
                               ].divide(const SizedBox(height: 6.0)),
-                            ),
-                            Column(
-                              mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  width: 340.0,
-                                  decoration: const BoxDecoration(),
-                                  child: Text(
-                                    valueOrDefault<String>(
-                                      petDetailsPetsRecord.behaviorDogs,
-                                      'calm',
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          fontSize: 16.0,
-                                          letterSpacing: 0.0,
-                                        ),
-                                  ),
-                                ),
-                                Container(
-                                  width: 340.0,
-                                  decoration: const BoxDecoration(),
-                                  child: Text(
-                                    valueOrDefault<String>(
-                                      petDetailsPetsRecord.behaviorPeople,
-                                      'Little bit aggressive',
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          fontSize: 16.0,
-                                          letterSpacing: 0.0,
-                                        ),
-                                  ),
-                                ),
-                              ].divide(const SizedBox(height: 12.0)),
                             ),
                           ].divide(const SizedBox(height: 24.0)),
                         ),
@@ -247,10 +297,10 @@ class _PetDetailsWidgetState extends State<PetDetailsWidget> {
                         padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         child: FFButtonWidget(
-                          onPressed: () async {
-                            context.safePop();
+                          onPressed: () {
+                            print('Button pressed ...');
                           },
-                          text: 'Continue',
+                          text: 'Edit',
                           options: FFButtonOptions(
                             width: double.infinity,
                             height: 40.0,

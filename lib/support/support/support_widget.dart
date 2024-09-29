@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'support_model.dart';
@@ -34,6 +35,12 @@ class _SupportWidgetState extends State<SupportWidget>
   void initState() {
     super.initState();
     _model = createModel(context, () => SupportModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      await launchURL(
+          'https://docs.google.com/forms/d/e/1FAIpQLSeOHtaU67o1coKgXceuB5BwsFGVePlXQXpgd8b818hUCZrqHQ/viewform?usp=pp_url&entry.1289419108=New+City');
+    });
 
     animationsMap.addAll({
       'containerOnPageLoadAnimation1': AnimationInfo(
@@ -218,7 +225,7 @@ class _SupportWidgetState extends State<SupportWidget>
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Welcome to support',
+                          'Welcome to WooFur\'s Support',
                           style:
                               FlutterFlowTheme.of(context).labelLarge.override(
                                     fontFamily: 'Readex Pro',
@@ -245,52 +252,64 @@ class _SupportWidgetState extends State<SupportWidget>
                               child: Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 16.0, 0.0, 0.0),
-                                child: Container(
-                                  width: 120.0,
-                                  constraints: const BoxConstraints(
-                                    maxWidth: 500.0,
-                                  ),
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    borderRadius: BorderRadius.circular(12.0),
-                                    border: Border.all(
-                                      color: FlutterFlowTheme.of(context)
-                                          .alternate,
-                                      width: 2.0,
+                                child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    await launchURL(
+                                        'https://www.instagram.com/woofurco/');
+                                  },
+                                  child: Container(
+                                    width: 120.0,
+                                    constraints: const BoxConstraints(
+                                      maxWidth: 500.0,
                                     ),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        FaIcon(
-                                          FontAwesomeIcons.instagram,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primary,
-                                          size: 36.0,
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 12.0, 0.0, 0.0),
-                                          child: Text(
-                                            'Reach Us',
-                                            textAlign: TextAlign.center,
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  letterSpacing: 0.0,
-                                                ),
+                                    decoration: BoxDecoration(
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                      borderRadius: BorderRadius.circular(12.0),
+                                      border: Border.all(
+                                        color: FlutterFlowTheme.of(context)
+                                            .alternate,
+                                        width: 2.0,
+                                      ),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          FaIcon(
+                                            FontAwesomeIcons.instagram,
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                            size: 36.0,
                                           ),
-                                        ),
-                                      ],
+                                          Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 12.0, 0.0, 0.0),
+                                            child: Text(
+                                              'Reach Us',
+                                              textAlign: TextAlign.center,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ).animateOnPageLoad(animationsMap[
@@ -301,52 +320,64 @@ class _SupportWidgetState extends State<SupportWidget>
                               child: Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 16.0, 0.0, 0.0),
-                                child: Container(
-                                  width: 120.0,
-                                  constraints: const BoxConstraints(
-                                    maxWidth: 500.0,
-                                  ),
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    borderRadius: BorderRadius.circular(12.0),
-                                    border: Border.all(
-                                      color: FlutterFlowTheme.of(context)
-                                          .alternate,
-                                      width: 2.0,
+                                child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    await launchURL(
+                                        'mailto:woofurhq@gmail.com');
+                                  },
+                                  child: Container(
+                                    width: 120.0,
+                                    constraints: const BoxConstraints(
+                                      maxWidth: 500.0,
                                     ),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        Icon(
-                                          Icons.email_outlined,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primary,
-                                          size: 36.0,
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 12.0, 0.0, 0.0),
-                                          child: Text(
-                                            'Email Us',
-                                            textAlign: TextAlign.center,
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  letterSpacing: 0.0,
-                                                ),
+                                    decoration: BoxDecoration(
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                      borderRadius: BorderRadius.circular(12.0),
+                                      border: Border.all(
+                                        color: FlutterFlowTheme.of(context)
+                                            .alternate,
+                                        width: 2.0,
+                                      ),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            Icons.email_outlined,
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                            size: 36.0,
                                           ),
-                                        ),
-                                      ],
+                                          Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 12.0, 0.0, 0.0),
+                                            child: Text(
+                                              'Email Us',
+                                              textAlign: TextAlign.center,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ).animateOnPageLoad(animationsMap[
@@ -459,7 +490,7 @@ class _SupportWidgetState extends State<SupportWidget>
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'How do I download Code?',
+                                    'How do I get refunded when canceling a booking?',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .override(
@@ -471,7 +502,7 @@ class _SupportWidgetState extends State<SupportWidget>
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: Text(
-                                      'Showcase a couple of eye-catching screenshots or mockups of your UI Kit to capture attention and give users a glimpse of what they can expect.',
+                                      'When you cancel a booking outside of the 24 hour window, we refund the amount in credits to your Woofur account. These credits can be used for future bookings  within the app. \n\nCredits available can be seen on profile tab.\n\nFor more details on our refund policy, please refer to the terms and conditions in the app.',
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
@@ -510,7 +541,7 @@ class _SupportWidgetState extends State<SupportWidget>
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'How do I download Code?',
+                                    'Can I modify or reschedule my booking? ',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .override(
@@ -522,7 +553,7 @@ class _SupportWidgetState extends State<SupportWidget>
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: Text(
-                                      'Showcase a couple of eye-catching screenshots or mockups of your UI Kit to capture attention and give users a glimpse of what they can expect.',
+                                      'Yes, you can modify or reschedule your booking by canceling the original booking and then using the credits you receive to schedule a new date. Please note that if you cancel within a 24-hour window before the booking, these credits will not be refunded.',
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
@@ -561,7 +592,7 @@ class _SupportWidgetState extends State<SupportWidget>
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'How do I download Code?',
+                                    'How can I suggest a new facility/city/capability?',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .override(
@@ -573,7 +604,7 @@ class _SupportWidgetState extends State<SupportWidget>
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: Text(
-                                      'Showcase a couple of eye-catching screenshots or mockups of your UI Kit to capture attention and give users a glimpse of what they can expect.',
+                                      'We welcome suggestions for new facilities! You can suggest a facility by filling out our form att he link below. Your input helps us grow and improve the services we offer!\n\n',
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
@@ -582,81 +613,41 @@ class _SupportWidgetState extends State<SupportWidget>
                                           ),
                                     ),
                                   ),
+                                  Align(
+                                    alignment: const AlignmentDirectional(0.0, -1.0),
+                                    child: FFButtonWidget(
+                                      onPressed: () async {
+                                        await launchURL(
+                                            'https://docs.google.com/forms/d/e/1FAIpQLSeOHtaU67o1coKgXceuB5BwsFGVePlXQXpgd8b818hUCZrqHQ/viewform?usp=pp_url&entry.1289419108=New+City');
+                                      },
+                                      text: 'Suggest Form',
+                                      options: FFButtonOptions(
+                                        height: 40.0,
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            16.0, 0.0, 16.0, 0.0),
+                                        iconPadding:
+                                            const EdgeInsetsDirectional.fromSTEB(
+                                                0.0, 0.0, 0.0, 0.0),
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .titleSmall
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              letterSpacing: 0.0,
+                                            ),
+                                        elevation: 0.0,
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                      ),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
                           ).animateOnPageLoad(
                               animationsMap['containerOnPageLoadAnimation6']!),
-                        ),
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              16.0, 16.0, 16.0, 0.0),
-                          child: FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
-                            text: 'Create Ticket',
-                            icon: const Icon(
-                              Icons.receipt_long,
-                              size: 15.0,
-                            ),
-                            options: FFButtonOptions(
-                              width: double.infinity,
-                              height: 48.0,
-                              padding: const EdgeInsets.all(0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .bodyLarge
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
-                              elevation: 3.0,
-                              borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).alternate,
-                                width: 1.0,
-                              ),
-                              borderRadius: BorderRadius.circular(60.0),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              16.0, 16.0, 16.0, 12.0),
-                          child: FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
-                            text: 'Delete Account',
-                            icon: const Icon(
-                              Icons.delete,
-                              size: 15.0,
-                            ),
-                            options: FFButtonOptions(
-                              width: double.infinity,
-                              height: 48.0,
-                              padding: const EdgeInsets.all(0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).error,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.white,
-                                    letterSpacing: 0.0,
-                                  ),
-                              elevation: 3.0,
-                              borderSide: const BorderSide(
-                                color: Colors.transparent,
-                                width: 1.0,
-                              ),
-                              borderRadius: BorderRadius.circular(60.0),
-                            ),
-                          ),
                         ),
                       ],
                     ),

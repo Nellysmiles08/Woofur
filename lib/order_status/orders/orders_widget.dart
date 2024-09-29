@@ -313,6 +313,9 @@ class _OrdersWidgetState extends State<OrdersWidget> {
                                                                     .override(
                                                                       fontFamily:
                                                                           'Readex Pro',
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .secondary,
                                                                       letterSpacing:
                                                                           0.0,
                                                                     ),
@@ -600,7 +603,7 @@ class _OrdersWidgetState extends State<OrdersWidget> {
                                                                               .bodyMedium
                                                                               .override(
                                                                                 fontFamily: 'Readex Pro',
-                                                                                color: FlutterFlowTheme.of(context).primary,
+                                                                                color: FlutterFlowTheme.of(context).secondary,
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),

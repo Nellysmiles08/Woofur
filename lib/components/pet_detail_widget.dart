@@ -65,7 +65,22 @@ class _PetDetailWidgetState extends State<PetDetailWidget> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
+                'Pet Name:',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'Readex Pro',
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
+                    ),
+              ),
+              Text(
                 widget.pet!.petName,
+                style: FlutterFlowTheme.of(context).labelMedium.override(
+                      fontFamily: 'Readex Pro',
+                      letterSpacing: 0.0,
+                    ),
+              ),
+              Text(
+                'Sex:',
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Readex Pro',
                       fontSize: 18.0,
@@ -82,11 +97,27 @@ class _PetDetailWidgetState extends State<PetDetailWidget> {
                     ),
               ),
               Text(
+                'Breed:',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'Readex Pro',
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
+                    ),
+              ),
+              Text(
                 widget.pet!.breed,
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Readex Pro',
                       color: FlutterFlowTheme.of(context).secondaryText,
                       fontSize: 16.0,
+                      letterSpacing: 0.0,
+                    ),
+              ),
+              Text(
+                'Age:',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'Readex Pro',
+                      fontSize: 18.0,
                       letterSpacing: 0.0,
                     ),
               ),
@@ -100,11 +131,27 @@ class _PetDetailWidgetState extends State<PetDetailWidget> {
                     ),
               ),
               Text(
+                'Weight:',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'Readex Pro',
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
+                    ),
+              ),
+              Text(
                 widget.pet!.weight,
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Readex Pro',
                       color: FlutterFlowTheme.of(context).secondaryText,
                       fontSize: 16.0,
+                      letterSpacing: 0.0,
+                    ),
+              ),
+              Text(
+                'Behavior with Dogs:',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'Readex Pro',
+                      fontSize: 18.0,
                       letterSpacing: 0.0,
                     ),
               ),
@@ -119,6 +166,14 @@ class _PetDetailWidgetState extends State<PetDetailWidget> {
                         letterSpacing: 0.0,
                       ),
                 ),
+              ),
+              Text(
+                'Behavior with People:',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'Readex Pro',
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
+                    ),
               ),
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),

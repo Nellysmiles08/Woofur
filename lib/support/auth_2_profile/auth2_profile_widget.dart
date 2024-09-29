@@ -173,8 +173,7 @@ class _Auth2ProfileWidgetState extends State<Auth2ProfileWidget>
                                           const Duration(milliseconds: 500),
                                       fadeOutDuration:
                                           const Duration(milliseconds: 500),
-                                      imageUrl: valueOrDefault(
-                                          currentUserDocument?.profilePic, ''),
+                                      imageUrl: currentUserPhoto,
                                       width: 100.0,
                                       height: 100.0,
                                       fit: BoxFit.cover,
@@ -201,7 +200,7 @@ class _Auth2ProfileWidgetState extends State<Auth2ProfileWidget>
                         const EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 0.0, 0.0),
                     child: AuthUserStreamWidget(
                       builder: (context) => Text(
-                        currentUserDisplayName,
+                        valueOrDefault(currentUserDocument?.firstName, ''),
                         style:
                             FlutterFlowTheme.of(context).displaySmall.override(
                                   fontFamily: 'Outfit',
@@ -552,7 +551,7 @@ class _Auth2ProfileWidgetState extends State<Auth2ProfileWidget>
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
-                        context.pushNamed('settings');
+                        context.pushNamed('Support');
                       },
                       child: Container(
                         width: double.infinity,
@@ -583,7 +582,7 @@ class _Auth2ProfileWidgetState extends State<Auth2ProfileWidget>
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Icon(
-                                Icons.settings,
+                                Icons.help_outline_rounded,
                                 color:
                                     FlutterFlowTheme.of(context).secondaryText,
                                 size: 24.0,
@@ -592,7 +591,7 @@ class _Auth2ProfileWidgetState extends State<Auth2ProfileWidget>
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 0.0, 0.0),
                                 child: Text(
-                                  'Settings',
+                                  'Support',
                                   style: FlutterFlowTheme.of(context)
                                       .labelLarge
                                       .override(
@@ -621,127 +620,75 @@ class _Auth2ProfileWidgetState extends State<Auth2ProfileWidget>
                   Padding(
                     padding:
                         const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
-                    child: Container(
-                      width: double.infinity,
-                      height: 50.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: const [
-                          BoxShadow(
-                            blurRadius: 3.0,
-                            color: Color(0x33000000),
-                            offset: Offset(
-                              0.0,
-                              1.0,
-                            ),
-                          )
-                        ],
-                        borderRadius: BorderRadius.circular(8.0),
-                        shape: BoxShape.rectangle,
-                        border: Border.all(
-                          color: FlutterFlowTheme.of(context).alternate,
-                          width: 1.0,
-                        ),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Icon(
-                              Icons.help_outline_rounded,
-                              color: FlutterFlowTheme.of(context).secondaryText,
-                              size: 24.0,
-                            ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 0.0, 0.0, 0.0),
-                              child: Text(
-                                'Support',
-                                style: FlutterFlowTheme.of(context)
-                                    .labelLarge
-                                    .override(
-                                      fontFamily: 'Readex Pro',
-                                      letterSpacing: 0.0,
-                                    ),
+                    child: InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        await launchURL(
+                            'https://www.woofurpets.com/termsandconditions');
+                      },
+                      child: Container(
+                        width: double.infinity,
+                        height: 50.0,
+                        decoration: BoxDecoration(
+                          color:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                          boxShadow: const [
+                            BoxShadow(
+                              blurRadius: 3.0,
+                              color: Color(0x33000000),
+                              offset: Offset(
+                                0.0,
+                                1.0,
                               ),
-                            ),
-                            Expanded(
-                              child: Align(
-                                alignment: const AlignmentDirectional(0.9, 0.0),
-                                child: Icon(
-                                  Icons.arrow_forward_ios,
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryText,
-                                  size: 18.0,
+                            )
+                          ],
+                          borderRadius: BorderRadius.circular(8.0),
+                          shape: BoxShape.rectangle,
+                          border: Border.all(
+                            color: FlutterFlowTheme.of(context).alternate,
+                            width: 1.0,
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Icon(
+                                Icons.privacy_tip_rounded,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
+                                size: 24.0,
+                              ),
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    12.0, 0.0, 0.0, 0.0),
+                                child: Text(
+                                  'Terms and Conditions',
+                                  style: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        letterSpacing: 0.0,
+                                      ),
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
-                    child: Container(
-                      width: double.infinity,
-                      height: 50.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: const [
-                          BoxShadow(
-                            blurRadius: 3.0,
-                            color: Color(0x33000000),
-                            offset: Offset(
-                              0.0,
-                              1.0,
-                            ),
-                          )
-                        ],
-                        borderRadius: BorderRadius.circular(8.0),
-                        shape: BoxShape.rectangle,
-                        border: Border.all(
-                          color: FlutterFlowTheme.of(context).alternate,
-                          width: 1.0,
-                        ),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Icon(
-                              Icons.privacy_tip_rounded,
-                              color: FlutterFlowTheme.of(context).secondaryText,
-                              size: 24.0,
-                            ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 0.0, 0.0, 0.0),
-                              child: Text(
-                                'Terms of Service',
-                                style: FlutterFlowTheme.of(context)
-                                    .labelLarge
-                                    .override(
-                                      fontFamily: 'Readex Pro',
-                                      letterSpacing: 0.0,
-                                    ),
-                              ),
-                            ),
-                            Expanded(
-                              child: Align(
-                                alignment: const AlignmentDirectional(0.9, 0.0),
-                                child: Icon(
-                                  Icons.arrow_forward_ios,
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryText,
-                                  size: 18.0,
+                              Expanded(
+                                child: Align(
+                                  alignment: const AlignmentDirectional(0.9, 0.0),
+                                  child: Icon(
+                                    Icons.arrow_forward_ios,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryText,
+                                    size: 18.0,
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -767,10 +714,12 @@ class _Auth2ProfileWidgetState extends State<Auth2ProfileWidget>
                               0.0, 0.0, 0.0, 0.0),
                           iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).primaryBackground,
+                          color: FlutterFlowTheme.of(context).primary,
                           textStyle:
                               FlutterFlowTheme.of(context).bodyLarge.override(
                                     fontFamily: 'Readex Pro',
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBackground,
                                     letterSpacing: 0.0,
                                   ),
                           elevation: 0.0,

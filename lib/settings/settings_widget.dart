@@ -193,42 +193,12 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                       buttonSize: 48.0,
                       fillColor: Colors.white,
                       icon: const FaIcon(
-                        FontAwesomeIcons.youtube,
-                        color: Color(0xFF606A85),
-                        size: 24.0,
-                      ),
-                      onPressed: () {
-                        print('IconButton pressed ...');
-                      },
-                    ),
-                    FlutterFlowIconButton(
-                      borderColor: const Color(0xFFE5E7EB),
-                      borderRadius: 12.0,
-                      borderWidth: 1.0,
-                      buttonSize: 48.0,
-                      fillColor: Colors.white,
-                      icon: const FaIcon(
                         FontAwesomeIcons.instagram,
                         color: Color(0xFF606A85),
                         size: 24.0,
                       ),
-                      onPressed: () {
-                        print('IconButton pressed ...');
-                      },
-                    ),
-                    FlutterFlowIconButton(
-                      borderColor: const Color(0xFFE5E7EB),
-                      borderRadius: 12.0,
-                      borderWidth: 1.0,
-                      buttonSize: 48.0,
-                      fillColor: Colors.white,
-                      icon: const FaIcon(
-                        FontAwesomeIcons.facebookF,
-                        color: Color(0xFF606A85),
-                        size: 24.0,
-                      ),
-                      onPressed: () {
-                        print('IconButton pressed ...');
+                      onPressed: () async {
+                        await launchURL('https://www.instagram.com/woofurco/');
                       },
                     ),
                     FlutterFlowIconButton(

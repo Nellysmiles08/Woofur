@@ -174,7 +174,7 @@ class _EditProfileAuth21WidgetState extends State<EditProfileAuth21Widget> {
                               child: CachedNetworkImage(
                                 fadeInDuration: const Duration(milliseconds: 200),
                                 fadeOutDuration: const Duration(milliseconds: 200),
-                                imageUrl: _model.imgUrl!,
+                                imageUrl: _model.uploadedFileUrl,
                                 width: 300.0,
                                 height: 200.0,
                                 fit: BoxFit.cover,
@@ -397,7 +397,7 @@ class _EditProfileAuth21WidgetState extends State<EditProfileAuth21Widget> {
                     onChanged: (val) => safeSetState(
                         () => _model.petSexValue = val?.firstOrNull),
                     selectedChipStyle: ChipStyle(
-                      backgroundColor: FlutterFlowTheme.of(context).secondary,
+                      backgroundColor: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).bodyMedium.override(
                                 fontFamily: 'Readex Pro',
@@ -666,7 +666,7 @@ class _EditProfileAuth21WidgetState extends State<EditProfileAuth21Widget> {
                     onChanged: (val) => safeSetState(
                         () => _model.petWeightValue = val?.firstOrNull),
                     selectedChipStyle: ChipStyle(
-                      backgroundColor: FlutterFlowTheme.of(context).secondary,
+                      backgroundColor: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).bodyMedium.override(
                                 fontFamily: 'Readex Pro',
@@ -863,7 +863,7 @@ class _EditProfileAuth21WidgetState extends State<EditProfileAuth21Widget> {
                   onChanged: (val) => safeSetState(
                       () => _model.neuteredValue = val?.firstOrNull),
                   selectedChipStyle: ChipStyle(
-                    backgroundColor: FlutterFlowTheme.of(context).secondary,
+                    backgroundColor: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -916,7 +916,7 @@ class _EditProfileAuth21WidgetState extends State<EditProfileAuth21Widget> {
                   onChanged: (val) =>
                       safeSetState(() => _model.rabiesValue = val?.firstOrNull),
                   selectedChipStyle: ChipStyle(
-                    backgroundColor: FlutterFlowTheme.of(context).secondary,
+                    backgroundColor: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -969,7 +969,7 @@ class _EditProfileAuth21WidgetState extends State<EditProfileAuth21Widget> {
                   onChanged: (val) =>
                       safeSetState(() => _model.dhlppValue = val?.firstOrNull),
                   selectedChipStyle: ChipStyle(
-                    backgroundColor: FlutterFlowTheme.of(context).secondary,
+                    backgroundColor: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -1276,7 +1276,7 @@ class _EditProfileAuth21WidgetState extends State<EditProfileAuth21Widget> {
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).primary,
+                      color: FlutterFlowTheme.of(context).secondary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Readex Pro',

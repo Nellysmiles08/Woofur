@@ -529,7 +529,7 @@ class _FacilityListingWidgetState extends State<FacilityListingWidget>
                                                                             0.0),
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
-                                                                        .primary,
+                                                                        .secondary,
                                                                     textStyle: FlutterFlowTheme.of(
                                                                             context)
                                                                         .titleSmall
@@ -808,7 +808,7 @@ class _FacilityListingWidgetState extends State<FacilityListingWidget>
                                                                             0.0),
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
-                                                                        .primary,
+                                                                        .secondary,
                                                                     textStyle: FlutterFlowTheme.of(
                                                                             context)
                                                                         .titleSmall
@@ -1014,7 +1014,7 @@ class _FacilityListingWidgetState extends State<FacilityListingWidget>
                                                                           0.0),
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
-                                                                      .primary,
+                                                                      .secondary,
                                                                   textStyle: FlutterFlowTheme.of(
                                                                           context)
                                                                       .titleSmall

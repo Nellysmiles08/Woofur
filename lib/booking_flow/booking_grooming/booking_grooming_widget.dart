@@ -578,7 +578,7 @@ class _BookingGroomingWidgetState extends State<BookingGroomingWidget> {
                                                             radioButtonColor:
                                                                 FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primary,
+                                                                    .secondary,
                                                             inactiveRadioButtonColor:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -807,7 +807,7 @@ class _BookingGroomingWidgetState extends State<BookingGroomingWidget> {
                                                   radioButtonColor:
                                                       FlutterFlowTheme.of(
                                                               context)
-                                                          .primary,
+                                                          .secondary,
                                                   inactiveRadioButtonColor:
                                                       FlutterFlowTheme.of(
                                                               context)
